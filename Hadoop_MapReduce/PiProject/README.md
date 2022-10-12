@@ -56,29 +56,30 @@ $ bin/hdfs namenode -format
 $ sbin/start-dfs.sh
 ```
 
-2-1. Reconnect if permission denied
+3. Reconnect if permission denied
 ```
 $ ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
 $ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 $ chmod 0600 ~/.ssh/authorized_keys
-$ ssh localhost```
+$ ssh localhost
+```
 
-3. confirm connection
+4. confirm connection
 ```
 $ wget http://localhost:9870/
 ```
 
-4-1. Compile and run java program
+5. Compile and run java program
 ```
 $ javac GenerateDots.java
 ```
 
-4-2. Save output in .txt file
+6. Save output in .txt file
 ```
 $ java GenerateDots 5 1000 > ./Input/dots.txt
 ```
 
-5. Make directories
+7. Make directories
 ```
 $ bin/hdfs dfs -mkdir /user
 $ bin/hdfs dfs -mkdir /user/ycao
@@ -86,19 +87,19 @@ $ bin/hdfs dfs -mkdir /user/ycao/PiProject
 $ bin/hdfs dfs -mkdir /user/ycao/PiProject/Input
 ```
 
-6. Copy input file from local to hadoop and check
+8. Copy input file from local to hadoop and check
 ```
 $ bin/hdfs dfs -put ../PiProject/Input/* PiProject/Input
 $ bin/hdfs dfs -ls PiProject/Input
 ```
 
-7. Compile Mapreduce program in Hadoop and create .jar file
+9. Compile Mapreduce program in Hadoop and create .jar file
 ```
 $ bin/hadoop com.sun.tools.javac.Main ./CalculatePiMR.java
 $ jar cf pi.jar CalculatePiMR*.class
 ```
 
-8. Run MapReduce Program with input file and save result in Output
+10. Run MapReduce Program with input file and save result in Output
 ```
 $ bin/hadoop jar pi.jar CalculatePiMR /user/ycao/PiProject/Input /user/ycao/PiProject/Output
 ```
