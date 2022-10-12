@@ -46,13 +46,12 @@ The value of pi can be calculated by counting the number of random darts that  f
 Process to test the project.
 
 * Steps
-   1. Format the file system
+   * Format the file system
    ```$ bin/hdfs namenode -format```
    
-   2. Start namenode
+   * Start namenode
 ```
-$ sbin/start-dfs.sh
-```
+$ sbin/start-dfs.sh```
    3. Reconnect if permission denied
 ```
 $ ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
