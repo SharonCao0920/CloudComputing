@@ -1,6 +1,6 @@
 # Pi Project
 
-This Pi Project is to run the MapReduce model using Hadoop-3.3.4 as the framework to calculate pi value. 
+This Pi Project is to run MapReduce model using Hadoop-3.3.4 as the framework to calculate pi value. 
 
 **[Pi Project Google Slides](https://docs.google.com/presentation/d/1A75PakJXY7raApU-OAx7mBwsi7o_ektbuqt7b68NZJ4/edit?usp=sharing)**
 
