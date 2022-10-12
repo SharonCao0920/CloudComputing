@@ -26,20 +26,22 @@ The value of pi can be calculated by counting the number of random darts that  f
 
 ### Implementation
 
-* A. Environment
+* Environment
     * Enable GCP instance
     * ssh Connect with localhost
-* B. Code
-    * Generate random dots with command line arguments as radius and number of pairs
+* Code
+    * 
     * Dots generated will be saved in file
 ```
 GenerateDots.java
 ```
-* MapReduce Program
+   * Generate random dots with command line arguments as radius and number of pairs
+   * Dots generated will be saved in file
+
 ```
 CalculatePiMR.java
 ```
-
+   * MapReduce Program
 ```
 CalculatePi.java
 ```
@@ -49,7 +51,7 @@ CalculatePi.java
 
 Process to test the project.
 
-* 1. Steps
+* Steps
 ```
 $ bin/hdfs namenode -format
 ```
@@ -101,7 +103,7 @@ $ bin/hadoop jar pi.jar CalculatePiMR /user/ycao/PiProject/Input /user/ycao/PiPr
     * Run MapReduce Program with input file
     * Save result in Output
 
-* 2. Results
+* Results
 ```
 $ bin/hdfs dfs -get PiProject/Output Output
 $ cat Output/*
