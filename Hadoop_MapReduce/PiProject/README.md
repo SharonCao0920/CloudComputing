@@ -45,28 +45,40 @@ The value of pi can be calculated by counting the number of random darts that  f
 
 Process to test the project.
 
-###### Steps
-   * Format the file system
-```$ bin/hdfs namenode -format```
+#### Steps
+1. Format the file system
+```
+$ bin/hdfs namenode -format
+```
    
-   * Start namenode
-```$ sbin/start-dfs.sh```
+2. Start namenode
+```
+$ sbin/start-dfs.sh
+```
 
-   * Reconnect if permission denied
-```$ ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa```
-```$ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys```
-```$ chmod 0600 ~/.ssh/authorized_keys```
-```$ ssh localhost```
-    * confirm connection
-```$ wget http://localhost:9870/```
+2-1. Reconnect if permission denied
+```
+$ ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
+$ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+$ chmod 0600 ~/.ssh/authorized_keys
+$ ssh localhost```
 
-    * Compile and run java program
-```$ javac GenerateDots.java```
+3. confirm connection
+```
+$ wget http://localhost:9870/
+```
 
-    * Save output in .txt file
-```$ java GenerateDots 5 1000 > ./Input/dots.txt```
+4-1. Compile and run java program
+```
+$ javac GenerateDots.java
+```
 
-    * Make directories
+4-2. Save output in .txt file
+```
+$ java GenerateDots 5 1000 > ./Input/dots.txt
+```
+
+5. Make directories
 ```
 $ bin/hdfs dfs -mkdir /user
 $ bin/hdfs dfs -mkdir /user/ycao
@@ -74,36 +86,32 @@ $ bin/hdfs dfs -mkdir /user/ycao/PiProject
 $ bin/hdfs dfs -mkdir /user/ycao/PiProject/Input
 ```
 
+6. Copy input file from local to hadoop and check
 ```
 $ bin/hdfs dfs -put ../PiProject/Input/* PiProject/Input
 $ bin/hdfs dfs -ls PiProject/Input
 ```
-    * Copy input file from local to hadoop and check
+
+7. Compile Mapreduce program in Hadoop and create .jar file
 ```
 $ bin/hadoop com.sun.tools.javac.Main ./CalculatePiMR.java
 $ jar cf pi.jar CalculatePiMR*.class
 ```
-    * Compile Mapreduce program in Hadoop
-    * *.class files created
-    * Create .jar file with *.class files
 
+8. Run MapReduce Program with input file and save result in Output
 ```
 $ bin/hadoop jar pi.jar CalculatePiMR /user/ycao/PiProject/Input /user/ycao/PiProject/Output
 ```
-    * Run MapReduce Program with input file
-    * Save result in Output
 
-###### Results
-    * Get output and save to local
-    * Display Output
+
+#### Results
+Get output and save to local and display Output
 ```
 $ bin/hdfs dfs -get PiProject/Output Output
 $ cat Output/*
 ```
 
-
-    * Compile CalculatePi.java 
-    * Using the output from MapReduce Program to run java program to get pi value
+Compile CalculatePi.java and use the output from MapReduce Program to run java program to get pi value
 ```
 $ jvac CalculatePi.java
 $ java CalculatePi Output
