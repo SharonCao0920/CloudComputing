@@ -8,7 +8,7 @@ The value of pi can be calculated by counting the number of random darts that  f
 
 ![My Image](./image/pi.png)
 
-![My Image](./image/pi1.png)
+![My Image](./image/pi2.png)
 
 
 ## Design
@@ -129,8 +129,14 @@ $ java CalculatePi Output
 
 HOW TO PROVE TEST RESULTS?
 
-Method 1. Decrease Radius  
-Method 2. Increase Dots Generated
+* Method 1: Decrease Radius  
+
+![My Image](./image/decreaseR.png)
+
+* Method 2: Increase Dots Generated
+
+![My Image](./image/increaseNum.png)
+
 
 
 ## Conclusion
