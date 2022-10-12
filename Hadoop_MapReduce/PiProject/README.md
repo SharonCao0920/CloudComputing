@@ -47,11 +47,10 @@ Process to test the project.
 
 * Steps
    * Format the file system
-   ```$ bin/hdfs namenode -format```
+```$ bin/hdfs namenode -format```
    
    * Start namenode
-```
-$ sbin/start-dfs.sh```
+```$ sbin/start-dfs.sh```
    3. Reconnect if permission denied
 ```
 $ ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
