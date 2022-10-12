@@ -124,13 +124,15 @@ $ bin/hadoop jar pi.jar CalculatePiMR /user/ycao/PiProject/Input /user/ycao/PiPr
 
 
 #### Results
-Get output and save to local and display Output
+* Get output and save to local and display Output
+
 ```
 $ bin/hdfs dfs -get PiProject/Output Output
 $ cat Output/*
 ```
 
-Compile CalculatePi.java and use the output from MapReduce Program to run java program to get pi value
+* Compile CalculatePi.java and use the output from MapReduce Program to run java program to get pi value
+
 ```
 $ jvac CalculatePi.java
 $ java CalculatePi Output
