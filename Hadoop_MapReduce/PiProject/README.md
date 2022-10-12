@@ -45,7 +45,7 @@ The value of pi can be calculated by counting the number of random darts that  f
 
 Process to test the project.
 
-* Steps
+#### Steps
 1. Format the file system
 ```
 $ bin/hdfs namenode -format
@@ -105,7 +105,7 @@ $ bin/hadoop jar pi.jar CalculatePiMR /user/ycao/PiProject/Input /user/ycao/PiPr
 ```
 
 
-* Results
+#### Results
 Get output and save to local and display Output
 ```
 $ bin/hdfs dfs -get PiProject/Output Output
