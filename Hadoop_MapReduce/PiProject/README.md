@@ -30,13 +30,9 @@ The value of pi can be calculated by counting the number of random darts that  f
     * Enable GCP instance
     * ssh Connect with localhost
 * Code
-    * 
-    * Dots generated will be saved in file
-```
-GenerateDots.java
-```
-   * Generate random dots with command line arguments as radius and number of pairs
-   * Dots generated will be saved in file
+   * GenerateDots.java
+      * Generate random dots with command line arguments as radius and number of pairs
+      * Dots generated will be saved in file
 
 ```
 CalculatePiMR.java
