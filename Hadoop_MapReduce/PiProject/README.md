@@ -51,31 +51,31 @@ Process to test the project.
    
    * Start namenode
 ```$ sbin/start-dfs.sh```
-   3. Reconnect if permission denied
+
+   * Reconnect if permission denied
 ```
 $ ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
 $ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 $ chmod 0600 ~/.ssh/authorized_keys
 $ ssh localhost
 ```
-
-```
-$ wget http://localhost:9870/
-```
     * confirm connection
-```
-$ javac GenerateDots.java
-$ java GenerateDots 5 1000 > ./Input/dots.txt
-```
+```$ wget http://localhost:9870/```
+
     * Compile and run java program
+```$ javac GenerateDots.java```
+
     * Save output in .txt file
+```$ java GenerateDots 5 1000 > ./Input/dots.txt```
+
+    * Make directories
 ```
 $ bin/hdfs dfs -mkdir /user
 $ bin/hdfs dfs -mkdir /user/ycao
 $ bin/hdfs dfs -mkdir /user/ycao/PiProject
 $ bin/hdfs dfs -mkdir /user/ycao/PiProject/Input
 ```
-    * Make directories
+
 ```
 $ bin/hdfs dfs -put ../PiProject/Input/* PiProject/Input
 $ bin/hdfs dfs -ls PiProject/Input
