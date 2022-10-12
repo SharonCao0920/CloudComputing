@@ -47,9 +47,8 @@ Process to test the project.
 
 * Steps
    1. Format the file system
-```
-$ bin/hdfs namenode -format
-```
+   ```$ bin/hdfs namenode -format```
+   
    2. Start namenode
 ```
 $ sbin/start-dfs.sh
