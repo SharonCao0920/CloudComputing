@@ -24,7 +24,7 @@ The value of pi can be calculated by counting the number of random darts that  f
 * Calculate Pi
 
 
-### Implementation
+## Implementation
 
 * Environment
     * Enable GCP instance
