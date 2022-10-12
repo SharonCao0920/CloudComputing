@@ -30,32 +30,32 @@ The value of pi can be calculated by counting the number of random darts that  f
     * Enable GCP instance
     * ssh Connect with localhost
 * Code
+
    * GenerateDots.java
       * Generate random dots with command line arguments as radius and number of pairs
       * Dots generated will be saved in file
 
-```
-CalculatePiMR.java
-```
-   * MapReduce Program
-```
-CalculatePi.java
-```
-    * Read MapReduce output file and use data to calculate pi value
+   * CalculatePiMR.java
+      * MapReduce Program
+
+   * CalculatePi.java
+      * Read MapReduce output file and use data to calculate pi value
 
 ## Test
 
 Process to test the project.
 
 * Steps
+   * Format the file system
 ```
 $ bin/hdfs namenode -format
 ```
-    * Format the file system
+    
+    * Start namenode
 ```
 $ sbin/start-dfs.sh
 ```
-    * Start namenode
+
 ```
 $ ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
 $ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
