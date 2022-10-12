@@ -141,3 +141,9 @@ Strengths and Weaknesses of MapReduce. (2016, September 11). LinkedIn. Retrieved
 Taylor, D. (2022, September 17). What is MapReduce in Hadoop? Big Data Architecture. Guru99. Retrieved October 10, 2022, from https://www.guru99.com/introduction-to-mapreduce.html 
 
 Value of Pi in Maths - Definition, Forms & Solved Examples. (n.d.). Byju's. Retrieved October 10, 2022, from https://byjus.com/maths/value-of-pi/  
+
+
+
+
+
+
