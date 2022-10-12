@@ -53,10 +53,10 @@ Process to test the project.
 ```$ sbin/start-dfs.sh```
 
    * Reconnect if permission denied
-```$ ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
-$ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
-$ chmod 0600 ~/.ssh/authorized_keys
-$ ssh localhost```
+```$ ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa```
+```$ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys```
+```$ chmod 0600 ~/.ssh/authorized_keys```
+```$ ssh localhost```
     * confirm connection
 ```$ wget http://localhost:9870/```
 
