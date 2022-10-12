@@ -5,7 +5,10 @@ This Pi Project is to using Hadoop-3.3.4 as the framework to run the MapReduce m
 ## Introduction
 
 The value of pi can be calculated by counting the number of random darts that  falls in the circle and outside the circle. 
+
 ![My Image](./image/pi.png)
+
+![My Image](./image/pi1.png)
 
 
 ## Design
@@ -16,6 +19,7 @@ The value of pi can be calculated by counting the number of random darts that  f
 * Using Hadoop framework to implement MapReduce model.
 * Program in Java Language.
 
+![My Image](./image/piMR.png)
 
 ### Process
 
