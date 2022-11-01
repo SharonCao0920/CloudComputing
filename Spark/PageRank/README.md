@@ -25,12 +25,8 @@ PageRank works by counting the number and quality of links to a page to determin
 
 ## Implementation
 * Manual Solution
- * Problem
  
  ![My Image](./image/problem.png)
- 
- * Solution
- 
  ![My Image](./image/i1.png)
  ![My Image](./image/i2.png)
 
