@@ -73,7 +73,7 @@ $ spark-submit PageRankProject/pagerank.py hdfs:///data/mllib/pagerank_data.txt 
 
 * Observation
 
-
+![My Image](./image/ob.png)
 
 ## Conclusion
 The more random dots generated to cover the area, the more accurate pi value we will get. This is determined by radius and number of dots generated.
