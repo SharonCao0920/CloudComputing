@@ -1,0 +1,88 @@
+ # PageRank Project
+
+This PageRank Project is to implemente PageRank algorithm with PySpark and Scala.
+
+**[PageRank Project Google Slides](https://docs.google.com/presentation/d/1ILLveSol3wyDaY8U17LL0d7b7DekkJGwxkWpVfXO8aM/edit?usp=sharing)**
+
+## Introduction
+
+PageRank (PR) is an algorithm used by Google Search to rank websites in their search engine results. 
+* **Theory**
+PageRank works by counting the number and quality of links to a page to determine a rough estimate of how important the website is. The underlying assumption is that more important websites are likely to receive more links from other websites.
+
+![My Image](./image/pi.png)
+
+* **Determine inside or outside**
+
+![My Image](./image/pi2.png)
+
+
+## Design
+
+* Manual Solution
+* Implement Pyspark and Scala
+* Compare results
+
+## Implementation
+* Manual Solution
+
+* Pyspark
+  * Environemnt Setup
+  * Code for program
+ 
+* Scala
+  * Environemnt Setup
+  * Code for program
+  
+## Test
+
+Process to test the project.
+
+#### Pyspark
+* Make directory in file system
+
+```
+$ hdfs dfs -mkdir hdfs:///data
+$ hdfs dfs -mkdir hdfs:///data/mllib
+```
+   
+* Copy input file from local to system
+
+```
+$ hdfs dfs -put ./data/mllib/* hdfs:///data/mllib
+```
+
+*  Execute pyspark program with command line arguments
+
+```
+$ spark-submit PageRankProject/pagerank.py hdfs:///data/mllib/pagerank_data.txt 2
+```
+
+* Result
+
+![My Image](./image/pi2.png)
+
+## Enhancement
+
+HOW TO PROVE TEST RESULTS?
+
+* Method 1: Decrease Radius  
+
+![My Image](./image/decreaseR.png)
+
+* Method 2: Increase Dots Generated
+
+![My Image](./image/increaseNum.png)
+
+
+
+## Conclusion
+The more random dots generated to cover the area, the more accurate pi value we will get. This is determined by radius and number of dots generated.
+
+
+## References
+
+Musib, A. (2022, September 6). Page Rank Algorithm and Implementation. GeeksforGeeks. Retrieved October 31, 2022, from https://www.geeksforgeeks.org/page-rank-algorithm-implementation/ 
+
+Gaga, L., & Cooper, B. (2022, January 17). ??? ??? - YouTube. Retrieved October 31, 2022, from https://hc.labnet.sfbu.edu/~henry/npu/classes/learning_spark/key_value_pair/slide/Example_PageRank.html 
+
