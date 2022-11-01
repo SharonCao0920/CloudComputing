@@ -10,11 +10,11 @@ PageRank (PR) is an algorithm used by Google Search to rank websites in their se
 * **Theory**
 PageRank works by counting the number and quality of links to a page to determine a rough estimate of how important the website is. The underlying assumption is that more important websites are likely to receive more links from other websites.
 
-![My Image](./image/pi.png)
+* **Example**
 
-* **Determine inside or outside**
+![My Image](./image/example.png)
 
-![My Image](./image/pi2.png)
+![My Image](./image/PRAlgorithm.png)
 
 
 ## Design
@@ -60,19 +60,13 @@ $ spark-submit PageRankProject/pagerank.py hdfs:///data/mllib/pagerank_data.txt 
 
 * Result
 
-![My Image](./image/pi2.png)
+![My Image](./image/resultPy.png)
 
 ## Enhancement
 
-HOW TO PROVE TEST RESULTS?
+* Compare Results
 
-* Method 1: Decrease Radius  
-
-![My Image](./image/decreaseR.png)
-
-* Method 2: Increase Dots Generated
-
-![My Image](./image/increaseNum.png)
+* Observation
 
 
 
