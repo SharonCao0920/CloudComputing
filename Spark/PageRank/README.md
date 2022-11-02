@@ -95,7 +95,8 @@ $ run-example SparkPageRank links.txt 2
 ![My Image](./image/ob.png)
 
 ## Conclusion
-The more random dots generated to cover the area, the more accurate pi value we will get. This is determined by radius and number of dots generated.
+Results matches.
+Personally prefer using Pyspark.
 
 
 ## References
