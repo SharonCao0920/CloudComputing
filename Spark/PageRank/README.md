@@ -67,6 +67,25 @@ $ spark-submit PageRankProject/pagerank.py hdfs:///data/mllib/pagerank_data.txt 
 
 ![My Image](./image/resultPy.png)
 
+#### Scala
+   
+* Copy input file from local to system
+
+```
+$ hdfs dfs -put links.txt .
+```
+
+*  Execute scala program with command line arguments
+
+```
+$ run-example SparkPageRank links.txt 2
+```
+
+* Result
+
+![My Image](./image/resultS.png)
+
+
 ## Enhancement
 
 * Compare Results
