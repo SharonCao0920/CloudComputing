@@ -96,7 +96,7 @@ $ hdfs dfs -mkdir hdfs:///pagerank
 $ hdfs dfs -put links.txt hdfs:///pagerank
 ```
 
-*  Run within shell
+*  Run code line by line within shell
 
 
 * Result
