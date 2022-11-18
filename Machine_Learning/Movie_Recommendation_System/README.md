@@ -2,7 +2,7 @@
 
 This PageRank Project is to implemente PageRank algorithm with PySpark and Scala.
 
-**[Movie Recommendation system Google Slides](*https://docs.google.com/presentation/d/1Bm1x5WRxM4nd2nwazsE5S-8ZJUpw5Di39ZobLhlzMB0/edit?usp=sharing*)
+**[Movie Recommendation system Google Slides](https://docs.google.com/presentation/d/1Bm1x5WRxM4nd2nwazsE5S-8ZJUpw5Di39ZobLhlzMB0/edit?usp=sharing)**
 
 
 ## Introduction
@@ -27,15 +27,21 @@ The general approach is iterative. During each iteration, one of the factor matr
 ## Implementation
 
 ### Google Colab
- 
+
+**[Detailed steps of execute on Google Colab](https://github.com/SharonCao0920/CloudComputing/blob/main/Machine_Learning/Movie_Recommendation_System/Movie_Recommendation_System.ipynb)**
+
 ## Test
 
 ### Google Cloud Platform
 
 * Download .py file from Colab
+
 * Create cluster on GCP and open VM through SSH
 
 * Upload .txt data files and .py source file to GCP
+
+![My Image](./image/upload.png)
+
 * Create directory in hdfs file system
 ```
 $ hdfs dfs -mkdir hdfs:///data
@@ -46,6 +52,7 @@ $ hdfs dfs -mkdir hdfs:///data
 ```
 $ hdfs dfs -put ./data/mllib/* hdfs:///data/mllib
 ```
+![My Image](./image/path.png)
 
 *  Execute .py source code
 
@@ -59,7 +66,7 @@ or
 $ python xxx.py
 ```
 
-![My Image](./image/resultPy.png)
+![My Image](./image/execute.png)
 
 
 ## Enhancement
