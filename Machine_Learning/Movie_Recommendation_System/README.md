@@ -8,12 +8,10 @@ This PageRank Project is to implemente PageRank algorithm with PySpark and Scala
 ## Introduction
 
 Recommender System is an information filtering tool that seeks to predict which product a user will like, and based on that, recommends a few products to the users. 
-* **Theory**
 
 The two widely used approaches for building a recommender System are:
 
 * content-based filtering (CBF)
-
 * collaborative filtering (CF)
 
 ![My Image](./image/Recommendation_System.png)
