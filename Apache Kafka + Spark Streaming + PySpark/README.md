@@ -134,6 +134,7 @@ $ export PATH=$SPARK_HOME/sbin:$PATH
 $ pyspark
 ```
 The following output would be visible on the console if everything were accurate:
+
 ![My Image](./image/spark/test.png)
 
 #### Start the master in this machine
