@@ -11,7 +11,7 @@ Three primary concerns in Real-time data ingesting are:
 
 **[Quick Start](https://kafka.apache.org/quickstart)**
 
-#### Step 1: Get Kafka
+### Step 1: Get Kafka
 
 [Download](https://kafka.apache.org/downloads) the latest Kafka release and extract it:
 
@@ -20,7 +20,7 @@ $ tar -xzf kafka_2.13-3.3.1.tgz
 $ cd kafka_2.13-3.3.1
 ``` 
 
-#### Step 2: Start the Kafka Environment
+### Step 2: Start the Kafka Environment
 *NOTE: Your local environment must have Java 8+ installed.*
 
 ##### Start the ZooKeeper service
