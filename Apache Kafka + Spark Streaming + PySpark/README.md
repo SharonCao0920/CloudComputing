@@ -14,12 +14,12 @@ Three primary concerns in Real-time data ingesting are:
 ### Step 1: Get Kafka
 
 [Download](https://kafka.apache.org/downloads) the latest Kafka release and extract it:
-
+![My Image](./image/kafka/download.png)
 ```
 $ tar -xzf kafka_2.13-3.3.1.tgz
 $ cd kafka_2.13-3.3.1
 ``` 
-![My Image](./image/kafka/download.png)
+![My Image](./image/kafka/unpack.png)
 
 ### Step 2: Start the Kafka Environment
 *NOTE: Your local environment must have Java 8+ installed.*
@@ -44,7 +44,7 @@ Before you can write your first events, you must create a topic. Open another te
 ```
 $ bin/kafka-topics.sh --create --topic quickstart-events --bootstrap-server localhost:9092
 ```
-![My Image](./image/kafka/topic.png)
+![My Image](./image/kafka/createTopic.png)
 
 To list all current topics:
 ```
@@ -57,6 +57,7 @@ Open another terminal session and run the console producer to write the events t
 ```
 $ bin/kafka-console-producer.sh --topic quickstart-events --bootstrap-server localhost:9092
 ```
+![My Image](./image/kafka/proucer.png)
 You can stop the producer client with Ctrl-C at any time.
 
 ### Step 5: Read the Events
@@ -64,7 +65,7 @@ Open another terminal session and run the console consumer client to read the ev
 ```
 $ bin/kafka-console-consumer.sh --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
 ```
-
+![My Image](./image/kafka/consumer.png)
 You can stop the consumer client with Ctrl-C at any time.
 
 
@@ -104,12 +105,12 @@ $ ./bin/spark-submit examples/src/main/python/streaming/network_wordcount.py loc
 ```
 $ wget https://www.apache.org/dyn/closer.lua/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3.tgz
 ```
-
+![My Image](./image/spark/download.png)
 ##### Unpack
 ```
 $ tar -xvf spark-3.3.1-bin-hadoop3.tgz
 ```
-
+![My Image](./image/spark/unpack.png)
 
 ##### Create soft links (optional)
 
@@ -117,30 +118,31 @@ This step is optional, but preferred; it facilitates upgrading spark versions in
 ```
 $ ln -s /home/xxx/spark-2.3.2-bin-hadoop2.7/ /home/xxx/spark
 ```
-
+![My Image](./image/spark/softlink.png)
 ##### Add SPARK_HOME entry to bashrc
 ```
 $ SPARK_HOME="/home/xxx/spark"
 $ export PATH=$SPARK_HOME/bin:$PATH
 $ export PATH=$SPARK_HOME/sbin:$PATH
 ```
+![My Image](./image/spark/sparkhome.png)
 ##### Verify the installation
 ```
 $ pyspark
 ```
 The following output would be visible on the console if everything were accurate:
-
+![My Image](./image/spark/test.png)
 
 ##### Start the master in this machine
 ```
 $ start-master.sh
 ```
 Spark Master Web GUI (the flowing screen) is accessible from the following URL: http://abc.def.com:8080/
-
+![My Image](./image/spark/master.png)
 
 ##### Starting Worker
 ```
 $ start-slave.sh spark://abc.def.ghi.jkl:7077
 ```
-
+![My Image](./image/spark/slave.png)
 
