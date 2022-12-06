@@ -19,6 +19,7 @@ Three primary concerns in Real-time data ingesting are:
 $ tar -xzf kafka_2.13-3.3.1.tgz
 $ cd kafka_2.13-3.3.1
 ``` 
+![My Image](./images/kafka/download.png)
 
 ### Step 2: Start the Kafka Environment
 *NOTE: Your local environment must have Java 8+ installed.*
@@ -27,19 +28,23 @@ $ cd kafka_2.13-3.3.1
 ```
 $ bin/zookeeper-server-start.sh config/zookeeper.properties
 ```
+![My Image](./images/kafka/zookeeper.png)
+![My Image](./images/kafka/zookeeper1.png)
 
 ##### Start the Kafka broker service
 *Open another terminal session and run:*
-
 ```
 $ bin/kafka-server-start.sh config/server.properties
 ```
+![My Image](./images/kafka/kafka.png)
+
 ### Step 3: Create a Topic to Store Your Events
 
 Before you can write your first events, you must create a topic. Open another terminal session and run:
 ```
 $ bin/kafka-topics.sh --create --topic quickstart-events --bootstrap-server localhost:9092
 ```
+![My Image](./images/kafka/topic.png)
 
 To list all current topics:
 ```
