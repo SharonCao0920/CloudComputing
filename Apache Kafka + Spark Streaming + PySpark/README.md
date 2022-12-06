@@ -57,7 +57,7 @@ Open another terminal session and run the console producer to write the events t
 ```
 $ bin/kafka-console-producer.sh --topic quickstart-events --bootstrap-server localhost:9092
 ```
-![My Image](./image/kafka/proucer.png)
+![My Image](./image/kafka/producer.png)
 You can stop the producer client with Ctrl-C at any time.
 
 ### Step 5: Read the Events
@@ -106,6 +106,7 @@ $ ./bin/spark-submit examples/src/main/python/streaming/network_wordcount.py loc
 $ wget https://www.apache.org/dyn/closer.lua/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3.tgz
 ```
 ![My Image](./image/spark/download.png)
+
 ##### Unpack
 ```
 $ tar -xvf spark-3.3.1-bin-hadoop3.tgz
@@ -119,6 +120,7 @@ This step is optional, but preferred; it facilitates upgrading spark versions in
 $ ln -s /home/xxx/spark-2.3.2-bin-hadoop2.7/ /home/xxx/spark
 ```
 ![My Image](./image/spark/softlink.png)
+
 ##### Add SPARK_HOME entry to bashrc
 ```
 $ SPARK_HOME="/home/xxx/spark"
@@ -126,6 +128,7 @@ $ export PATH=$SPARK_HOME/bin:$PATH
 $ export PATH=$SPARK_HOME/sbin:$PATH
 ```
 ![My Image](./image/spark/sparkhome.png)
+
 ##### Verify the installation
 ```
 $ pyspark
@@ -137,12 +140,16 @@ The following output would be visible on the console if everything were accurate
 ```
 $ start-master.sh
 ```
-Spark Master Web GUI (the flowing screen) is accessible from the following URL: http://abc.def.com:8080/
 ![My Image](./image/spark/master.png)
+
+Spark Master Web GUI (the flowing screen) is accessible from the following URL: http://abc.def.com:8080/
+
+![My Image](./image/spark/masterlocal.png)
 
 ##### Starting Worker
 ```
 $ start-slave.sh spark://abc.def.ghi.jkl:7077
 ```
 ![My Image](./image/spark/slave.png)
+![My Image](./image/spark/slaveLocal.png)
 
