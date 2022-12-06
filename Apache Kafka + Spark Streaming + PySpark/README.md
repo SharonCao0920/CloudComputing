@@ -101,19 +101,19 @@ $ ./bin/spark-submit examples/src/main/python/streaming/network_wordcount.py loc
 
 [Set Up Spark and Kafka on Windows 11]()
 
-##### Download spark package
+#### Download spark package
 ```
 $ wget https://www.apache.org/dyn/closer.lua/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3.tgz
 ```
 ![My Image](./image/spark/download.png)
 
-##### Unpack
+#### Unpack
 ```
 $ tar -xvf spark-3.3.1-bin-hadoop3.tgz
 ```
 ![My Image](./image/spark/unpack.png)
 
-##### Create soft links (optional)
+#### Create soft links (optional)
 
 This step is optional, but preferred; it facilitates upgrading spark versions in the future.
 ```
@@ -121,7 +121,7 @@ $ ln -s /home/xxx/spark-2.3.2-bin-hadoop2.7/ /home/xxx/spark
 ```
 ![My Image](./image/spark/softlink.png)
 
-##### Add SPARK_HOME entry to bashrc
+#### Add SPARK_HOME entry to bashrc
 ```
 $ SPARK_HOME="/home/xxx/spark"
 $ export PATH=$SPARK_HOME/bin:$PATH
@@ -129,14 +129,14 @@ $ export PATH=$SPARK_HOME/sbin:$PATH
 ```
 ![My Image](./image/spark/sparkhome.png)
 
-##### Verify the installation
+#### Verify the installation
 ```
 $ pyspark
 ```
 The following output would be visible on the console if everything were accurate:
 ![My Image](./image/spark/test.png)
 
-##### Start the master in this machine
+#### Start the master in this machine
 ```
 $ start-master.sh
 ```
@@ -146,7 +146,7 @@ Spark Master Web GUI (the flowing screen) is accessible from the following URL: 
 
 ![My Image](./image/spark/masterlocal.png)
 
-##### Starting Worker
+#### Starting Worker
 ```
 $ start-slave.sh spark://abc.def.ghi.jkl:7077
 ```
