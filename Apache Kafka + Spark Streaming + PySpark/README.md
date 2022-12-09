@@ -154,3 +154,18 @@ $ start-slave.sh spark://abc.def.ghi.jkl:7077
 ![My Image](./image/spark/slave.png)
 ![My Image](./image/spark/slaveLocal.png)
 
+### Step 2: Start Kafka
+
+#### Start zookeeper: Terminal 1
+#### Start Kafka: Terminal 2
+
+### Step 3: Streaming
+
+#### Create Topics and Run spark_processor.py: Terminal 3
+![My Image](./image/spark/slaveLocal.png)
+
+#### Start Run consumer.py: Terminal 4
+![My Image](./image/spark/slaveLocal.png)
+
+#### Start Run producer.py: Terminal 5
+![My Image](./image/spark/slaveLocal.png)
