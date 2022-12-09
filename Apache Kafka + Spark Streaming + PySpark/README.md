@@ -97,11 +97,9 @@ $ ./bin/spark-submit examples/src/main/python/streaming/network_wordcount.py loc
 ![My Image](./image/spark/streaming.png)
 
 # Section 3: Connecting the Dots (Python, Spark, and Kafka)
+[Reference](https://towardsdatascience.com/connecting-the-dots-python-spark-and-kafka-19e6beba6404)
 
 ### Step 1: Installing Spark
-
-
-[Set Up Spark and Kafka on Windows 11]()
 
 #### Download spark package
 ```
