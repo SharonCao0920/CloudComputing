@@ -1,4 +1,4 @@
-### [Detailed Steps on Windows 11](StepsWindows.pdf)
+### [Detailed Steps on Windows 11](StepsWindows11.pdf)
 
 ### [Detailed Steps on Google Cloud Platform](StepsGCP.pdf)
 
