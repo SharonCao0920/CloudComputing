@@ -1,6 +1,6 @@
-### [Detailed Steps on Windows 11](StepsWindows)
+### [Detailed Steps on Windows 11](StepsWindows.pdf)
 
-### [Detailed Steps on Google Cloud Platform](StepsGCP)
+### [Detailed Steps on Google Cloud Platform](StepsGCP.pdf)
 
 # Section 1: Study the basic concepts about Kafka
 
