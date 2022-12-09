@@ -173,6 +173,7 @@ $ bin/kafka-server-start.sh config/server.properties
 ### Step 3: Streaming
 
 #### Create Topics and Run spark_processor.py: Terminal 3
+
 ![My Image](./image/integrate/topics.png)
 
 * Code
@@ -180,6 +181,9 @@ $ bin/kafka-server-start.sh config/server.properties
 ![My Image](./image/integrate/processor.png)
 
 * Result
+```
+$ spark-submit --jars /spark_script/spark-streaming-kafka-0-8-assembly_2.11-2.4.8.jar --packages org.apache.spark:spark-streaming-kafka-0-8_2.11:2.1.2 org.apache.spark:spark-sql-kafka-0-10_2.12:3.3.1  --deploy-mode client spark_script/spark_processor.py
+```
 
 ![My Image](./image/integrate/result.png)
 
