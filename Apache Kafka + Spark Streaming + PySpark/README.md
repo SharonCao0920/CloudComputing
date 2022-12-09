@@ -179,7 +179,7 @@ $ bin/kafka-server-start.sh config/server.properties
 
 ![My Image](./image/integrate/processor.png)
 
-*Result
+* Result
 
 ![My Image](./image/integrate/result.png)
 
