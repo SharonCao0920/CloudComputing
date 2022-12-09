@@ -88,11 +88,13 @@ WordCount-Streaming Example
 ```
 $ nc -lk 9999
 ```
+![My Image](./image/spark/netcat.png)
 
 * Then, in a different terminal, start the network_wordcount.py example
 ```
 $ ./bin/spark-submit examples/src/main/python/streaming/network_wordcount.py localhost 9999
 ```
+![My Image](./image/spark/streaming.png)
 
 # Section 3: Connecting the Dots (Python, Spark, and Kafka)
 
