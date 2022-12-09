@@ -1,3 +1,6 @@
+[Detailed Steps on Windows 11](StepsWindows11)
+[Detailed Steps on Google Cloud Platform](StepsGCP)
+
 # Section 1: Study the basic concepts about Kafka
 
 Three primary concerns in Real-time data ingesting are:
