@@ -18,7 +18,7 @@ GraphFrame provides the following built-in algorithms:
 
 
 #### **GraphX**
-![My_image](https://hc.labnet.sfbu.edu/~henry/npu/classes/pyspark_sql_recipes/graphframes/slide/3fig2.webp)
+![My_image](image/graphx.png)
 
 #### **Compare**
 ![My_image](image/compare.png)
