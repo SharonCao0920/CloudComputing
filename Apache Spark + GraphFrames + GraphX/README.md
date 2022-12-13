@@ -101,6 +101,8 @@ $ spark-submit --packages graphframes:graphframes:0.8.2-spark3.1-s_2.12 graphdem
 
 *   Fixed and run, successfully execute
 
+![My_image](image/typo_fix.png)
+
 ![My_image](image/submit_1.png)
 ![My_image](image/submit_2.png)
 ![My_image](image/submit_3.png)
