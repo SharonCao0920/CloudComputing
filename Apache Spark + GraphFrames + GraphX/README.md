@@ -1,3 +1,4 @@
+### [Detailed Steps PDF](Detailed_step_GraphFrame.pdf)
 # **PySpark: DataFrames / SparkSQL  + GraphFrames / GraphX**
 ## **Step 1: Create Cluster on GCP**
 
