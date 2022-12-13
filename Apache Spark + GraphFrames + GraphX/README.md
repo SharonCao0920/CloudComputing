@@ -23,14 +23,15 @@ GraphFrame provides the following built-in algorithms:
 #### **Compare**
 ![My_image](image/compare.png)
 
-## **Step 1: Create Cluster on GCP**
+## **Implementation**
+## Step 1: Create Cluster on GCP
 
 
 *   Refer to previous HW to create
 *   Open a terminal through SSH
 ![My_image](image/start.png)
 
-## **Step 2: Data Prepare**
+## Step 2: Data Prepare
 
 *   Upload the csv data files from local to cluster
 
@@ -58,7 +59,7 @@ $ hdfs dfs -ls hdfs:///mydata
 ![My_image](image/path.png)
 
 
-## **Step 3: Run the code in pyspark shell line by line**
+## Step 3: Run the code in pyspark shell line by line
 
 ```
 $ pyspark
@@ -104,7 +105,7 @@ $ pyspark --packages graphframes:graphframes:0.8.2-spark3.1-s_2.12
 ![My_image](image/shell_13.png)
 
 
-## **Step 4: Run the code with spark-submit**
+## Step 4: Run the code with spark-submit
 
 *   With experience of fixed errors earlier
 *   Run code
