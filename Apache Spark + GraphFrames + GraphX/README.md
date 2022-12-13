@@ -86,8 +86,7 @@ $ pyspark --packages graphframes:graphframes:0.8.2-spark3.1-s_2.12
 *   Run code
 
 ```
-$ spark-submit --packages graphframes:graphframes:0.8.2-spark3.1-s_2.12
-graphdemo.py
+$ spark-submit --packages graphframes:graphframes:0.8.2-spark3.1-s_2.12graphdemo.py
 ```
 ![My_image](image/submit_c.png)
 
