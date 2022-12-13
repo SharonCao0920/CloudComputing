@@ -4,10 +4,7 @@
 
 *   Refer to previous HW to create
 *   Open a terminal through SSH
-
-
-
-
+![My_image](image/start.png)
 
 
 ## **Step 2: Data Prepare**
