@@ -52,8 +52,7 @@ $ pyspark --packages graphframes:graphframes:0.8.2-spark2.4-s_2.11
 
 ![My_image](image/error.png)
 
-*   Check pyspark version and find correspondence jar [package](https://spark-
-packages.org/package/graphframes/graphframes)
+*   Check pyspark version and find correspondence jar [package](https://spark-packages.org/package/graphframes/graphframes)
 
 ![My_image](image/pyspark_v.png)
 
