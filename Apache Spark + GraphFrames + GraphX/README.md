@@ -1,5 +1,28 @@
 ### [Detailed Steps PDF](Detailed_Step_GraphFrame.pdf)
+
 # **PySpark: DataFrames / SparkSQL  + GraphFrames / GraphX**
+
+## **Introduction**
+
+#### **GraphFrame**
+
+GraphFrame provides the following built-in algorithms:
+
+*   Triangle count
+*   PageRank
+*   Shortest Path
+*   Label propagation
+*   Connected components
+*   SVD++
+*   Strongly connected components
+
+
+#### **GraphX**
+![My_image](https://hc.labnet.sfbu.edu/~henry/npu/classes/pyspark_sql_recipes/graphframes/slide/3fig2.webp)
+
+#### **Compare**
+![My_image](image/compare.png)
+
 ## **Step 1: Create Cluster on GCP**
 
 
