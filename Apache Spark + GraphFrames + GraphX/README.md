@@ -17,7 +17,7 @@
 ```
 $ ls
 ```
-![My_image](image/check.png)
+![My_image](image/checkdata.png)
 
 
 *   Create HDFS file system and copy the data files to HDFS
