@@ -1,3 +1,5 @@
+### [Google Slide](https://docs.google.com/presentation/d/1sMvdYT2gl8mwgOSrWHTpJTlSDnBbPBT8MTQHxO_JbAI/edit?usp=sharing)
+
 ### [Detailed Steps PDF](Detailed_Step_GraphFrame.pdf)
 
 # **PySpark: DataFrames / SparkSQL  + GraphFrames / GraphX**
