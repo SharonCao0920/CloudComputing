@@ -4,7 +4,7 @@
 ```
 $ gcloud compute zones describe us-west1-b
 ```
-![MyImage](/image/console.png)
+![My Image](./image/console.png)
  
 #### **Determine zone support for Intel Haswell Platform**
 ```
