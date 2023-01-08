@@ -1,10 +1,10 @@
 ## **Section 1: Create Image**
 
-
 #### **Active Cloud Shell on GCP**
 ```
 $ gcloud compute zones describe us-west1-b
 ```
+![MyImage](/image/console.png)
  
 #### **Determine zone support for Intel Haswell Platform**
 ```
@@ -40,7 +40,7 @@ $ gcloud compute instances create nested-vm-image1 --zone us-west1-b --min-cpu-p
  
 
 
-#### **onnect to VM**
+#### **Connect to VM**
  
  
 
@@ -51,7 +51,6 @@ $ grep -cw vmx /proc/cpuinfo
 
 
 ## **Section 2: Install tools**
-
 
 ## *Install kubectl binary with curl*
 [Kubectl Information Page](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/ )
@@ -113,7 +112,7 @@ $ sudo apt-get install docker.io
 $ docker --version
 ```
  
-## **Section 3: Run Application**
+## **Section 3: Prepare Application**
 
 
 #### **Start Docker and Install Contrack**
@@ -131,36 +130,36 @@ $ minikube start
 #### **Creating files**
 
 * Making a project folder
-```
-$ mkdir dockerImg
-$ cd dockerImg
-```
+    ```
+    $ mkdir dockerImg
+    $ cd dockerImg
+    ```
  
-* app.js
-```
-const http = require('http');
-const os = require('os');
+* `$ vi app.js`
+    ```
+    const http = require('http');
+    const os = require('os');
 
-console.log("Kubia server starting...");
+    console.log("Kubia server starting...");
 
-var handler = function(request, response) {
-        console.log("Received request from "+ request.connection.remoteAddress);
-        response.writeHead(200);
-        response.end("You've hit " + os.hostname() + "\n");
-};
+    var handler = function(request, response) {
+            console.log("Received request from "+ request.connection.remoteAddress);
+            response.writeHead(200);
+            response.end("You've hit " + os.hostname() + "\n");
+    };
 
-var www = http.createServer(handler);
+    var www = http.createServer(handler);
 
-www.listen(8080);
-```
+    www.listen(8080);
+    ```
  
 
-* Dockerfile
-```
-FROM node:7
-ADD app.js /app.js
-ENTRYPOINT [“node”, “app.js”]
-```
+* `$vi Dockerfile`
+    ```
+    FROM node:7
+    ADD app.js /app.js
+    ENTRYPOINT [“node”, “app.js”]
+    ```
  
 
 #### **Build docker image**
@@ -188,101 +187,86 @@ $ sudo docker push sharoncao0920/kubernetes_2023:kubia
 ```
  
 
-#### **Run first on Kubernetes**
- 
-Enable Kubernetes API on GCP 
- 
- 
-$ gcloud container clusters create kubia --num-nodes=1 --machine-type=e2-micro --region=us-west1
- 
-$ kubectl get nodes
- 
-	Minikube
-$ kubectl cluster-info
- 
-$ vim kubia_rc.yaml
- 
+## **Section 4: Run Application on Kubernetes**
 
+### **Minikube**
 
-$ kubectl create -f kubia_rc.yaml
+* Get cluster information
+    ```
+    $ kubectl cluster-info
+    ``` 
 
-
-
-
-
-Minikube
-apiVersion: v1
-kind: ReplicationController
-metadata:
-  name: kubia
-spec:
-  replicas: 3
-  selector:
-    app: kubia
-  template:
+* ` $vi kubia_rc.yaml`
+    ```
+    apiVersion: v1
+    kind: ReplicationController
     metadata:
-      name: kubia
-      labels:
-        app: kubia
+    name: kubia
     spec:
-      containers:
-      - name: kubia-container
-        image: sharoncao0920/kebernetes_2023
-        ports:
-        - containerPort: 8080
+    replicas: 3
+    selector:
+        app: kubia
+    template:
+        metadata:
+        name: kubia
+        labels:
+            app: kubia
+        spec:
+        containers:
+        - name: kubia-container
+            image: sharoncao0920/kebernetes_2023
+            ports:
+            - containerPort: 8080
+    ``` 
+
+* Apply yaml file
+    ```
+    $ kubectl apply -f kubia-rc.yaml
+    ```
+
+
+* Run image
+    ```
+    $ sudo docker run -p 8080:8080 -d sharoncao0920/kubernetes_2023
+    $ kubectl run kubia --image=sharoncao0920/kubernetes_2023 --port=8080
+    ``` 
+
+
+* Get pods information
+    ```
+    $ kubectl get pods
+    ``` 
+    *Note: it may take time to get all pods ready, re-run the command to get updated status*
+ 
+
+* Start tunnel
+    ```
+    $ minikube tunnel
+    ```
+
+* Open another terminal and expose a service
+    ```
+    $ kubectl expose pod kubia --type=LoadBalancer --port 8080
+    ```
+
+* List services
+    ```
+    $ kubectl get svc
+    ```
+
+* Verify the service is reachable
+    ```
+    $ curl 10.103.29.158:8080
+    ```
  
 
 
 
+* Other commands maybe useful
 
-$ kubectl apply -f kubia-rc.yaml
- 
+    Show images information on Docker `$ sudo docker images`
 
-
-
-
-
-
-
-
-
-
-
-$ sudo docker images
- 
-
-$ kubectl describe replicationcontrollers/kubia
- 
-
-
-$ sudo docker run -p 8080:8080 -d sharoncao0920/kubernetes_2023
- 
-$ kubectl run kubia --image=sharoncao0920/kubernetes_2023 --port=8080
- 
-
-
-
-$ kubectl get pods
- 
- 
- 
- 
-$ kubectl expose pod kubia --type=LoadBalancer --name kubia-http
- 
-$ kubectl get services
- 
-$ minikube tunnel
- 
-$ kubectl expose pod kubia --type=LoadBalancer --port 8080
- 
-$ kubectl get svc
- 
-$ curl 10.103.29.158:8080
- 
-
-
-
-
+    Replication controller information `$ kubectl describe replicationcontrollers/kubia`
 
 
 
@@ -297,6 +281,13 @@ GKE
 
 $ gcloud container clusters create kubia --num-nodes=1 --machine-type=e2-micro --region=us-west1
 
-
+ 
+Enable Kubernetes API on GCP 
+ 
+ 
+$ gcloud container clusters create kubia --num-nodes=1 --machine-type=e2-micro --region=us-west1
+ 
+$ kubectl get nodes
+ 
 
 
