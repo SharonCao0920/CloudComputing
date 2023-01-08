@@ -1,53 +1,58 @@
 ## **Section 1: Create Image**
 
 #### **Active Cloud Shell on GCP**
-```
-$ gcloud compute zones describe us-west1-b
-```
+
 ![My Image](./image/console.png)
+![My Image](./image/shell.png)
  
 #### **Determine zone support for Intel Haswell Platform**
 ```
 $ gcloud compute zones describe us-west1-b
 ```
+![My Image](./image/zonedetail.png)
 
-#### C**reate a staging disk**
+#### **reate a staging disk**
 ```
 $ gcloud compute disks create stagingdisk --image-project ubuntu-os-cloud --image-family ubuntu-2004-lts --zone us-west1-b
 ```
+![My Image](./image/disk.png)
 
 *Note: https://cloud.google.com/compute/docs/images/os-details  
 Check Ubuntu LTS Image configuration*
- 
+![My Image](./image/config.png)
  
 #### **Create a nested VM**
 ```
 $ gcloud compute images create nested-vm-image --source-disk=stagingdisk --source-disk-zone=us-west1-b --licenses=https://www.googleapis.com/compute/v1/projects/vm-options/global/licenses/enable-vmx
 ```
+![My Image](./image/nested.png)
 
  
 #### **Delete the source disk we created temporarily as a staging disk**
 ```
 $ gcloud compute disks delete stagingdisk --zone us-west1-b
 ```
+![My Image](./image/deletedisk.png)
  
 #### **Create Image**
 ```
 $ gcloud compute instances create nested-vm-image1 --zone us-west1-b --min-cpu-platform "Intel Haswell" --machine-type n1-standard-4 --image nested-vm-image
 ``` 
+![My Image](./image/createimage.png)
 
 #### **Verify VM in Console**
- 
+![My Image](./image/verifyimage.png) 
 
 
 #### **Connect to VM**
- 
- 
+![My Image](./image/connectVM1.png) 
+![My Image](./image/connectVM2.png)  
 
 #### **Verify the VM is online**
 ```
 $ grep -cw vmx /proc/cpuinfo
 ```
+![My Image](./image/verifyonline.png) 
 
 
 ## **Section 2: Install tools**
@@ -60,26 +65,32 @@ $ grep -cw vmx /proc/cpuinfo
 ```
 $ curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" 
 ```
+![My Image](./image/kubectldownload.png) 
  
 #### **Validate the binary (optional)**
 ```
 $ curl -LO "https://dl.k8s.io/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
 $ echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
 ```
+![My Image](./image/kubectlvalidate.png)
+![My Image](./image/kubectlvalidate1.png)
 
 #### **Install kubectl**
 ```
 $ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
+![My Image](./image/kubectlinstall.png)
  
 #### **Test to ensure the version you installed is up-to-date:**
 ```
 $ kubectl version --client
 ```
+![My Image](./image/kubectlcheck1.png)
 or
 ```
 $ kubectl version --client --output=yaml    
 ```
+![My Image](./image/kubectlcheck2.png)
  
 ## *Install Minikube*
 [Minikube Information Page](https://minikube.sigs.k8s.io/docs/start/ )
@@ -89,43 +100,49 @@ $ kubectl version --client --output=yaml
 $ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 $ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 ```
+![My Image](./image/minikubeinstall.png)
  
 #### **Move minikube**
 ```
 $ sudo cp minikube /usr/bin/
 ```
- 
+![My Image](./image/minikubemove.png)
 
 ## *Install Docker*
 #### **Install VirtualBox and extension package**
 ```
 $ sudo apt-get install curl wget apt-transport-https virtualbox virtualbox-ext-pack -y
 ``` 
+![My Image](./image/dockerinstall.png)
 
 #### **Install docker.io**
 ```
 $ sudo apt-get install docker.io
 ```
+![My Image](./image/dockerinstall1.png)
  
 #### **Verify**
 ```
 $ docker --version
 ```
+![My Image](./image/dockercheck.png)
  
 ## **Section 3: Prepare Application**
 
-
-#### **Start Docker and Install Contrack**
+#### **Start Docker and Install Conntrack**
 ```
 $ sudo service docker start
 $ sudo apt-get install conntrack
 ``` 
+![My Image](./image/dockerstart.png)
+![My Image](./image/conntrackinstall.png)
 
 #### **Start Minikube**
 ```
 $ cd /usr/bin
 $ minikube start
 ```
+![My Image](./image/minikubestart.png)
  
 #### **Creating files**
 
@@ -134,6 +151,7 @@ $ minikube start
     $ mkdir dockerImg
     $ cd dockerImg
     ```
+    ![My Image](./image/directory.png)
  
 * `$ vi app.js`
     ```
@@ -152,6 +170,7 @@ $ minikube start
 
     www.listen(8080);
     ```
+    ![My Image](./image/app.png)
  
 
 * `$vi Dockerfile`
@@ -160,12 +179,14 @@ $ minikube start
     ADD app.js /app.js
     ENTRYPOINT [“node”, “app.js”]
     ```
+    ![My Image](./image/dockerfile.png)
  
 
 #### **Build docker image**
 ```
 $ sudo docker build -t kubia .
 ```
+![My Image](./image/kubectlcheck1.png)
 
 
 #### **Run image on a container on localhost**
