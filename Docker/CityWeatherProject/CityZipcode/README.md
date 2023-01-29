@@ -42,13 +42,13 @@ run()
 ```
 
 ## **Step 2: Test cityserver.py**
-* **In Broswer**
+### **1) In Broswer**
 ```
 $ python cityserver.py
 ```
 
 
-* **With curl**
+### **2) With curl**
 ```
 $ curl http://localhost:8000/zipcode/[city_name]
 ```
