@@ -15,7 +15,7 @@
 
 ![My Image](./image/m2.png)
 
-[Details](https://github.com/SharonCao0920/CloudComputing/tree/main/Docker/CityWeatherProject/ZipcodeWeather)
+[Details](https://github.com/SharonCao0920/CloudComputing/tree/main/Docker/CityWeatherProject/ZipWeather)
 
 ## **Docker Images and Containers**
 ![My Image](./image/images.png)
