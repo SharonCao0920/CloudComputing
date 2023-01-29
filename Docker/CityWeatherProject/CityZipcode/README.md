@@ -14,7 +14,7 @@
 ![My Image](./image/dockerfile.png)
 
 ## **Step 4: Create requirement.txt**
-![My Image](./image/requirement.png)
+![My Image](./image/requirements.png)
 
 ## **Step 5: Build Image**
 
