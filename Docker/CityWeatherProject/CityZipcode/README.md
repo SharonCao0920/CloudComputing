@@ -43,10 +43,15 @@ run()
 
 ## **Step 2: Test cityserver.py**
 * **In Broswer**
+```
+$ python cityserver.py
+```
 
 
 * **With curl**
-
+```
+$ curl http://localhost:8000/zipcode/{city_name}
+```
 
 ## **Step 3: Create Dockerfile**
 ![My Image](./image/dockerfile.png)
