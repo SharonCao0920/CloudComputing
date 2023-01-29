@@ -53,6 +53,7 @@ $ python cityserver.py
 
 * Open browser with URL: http://localhost:8000/zipcode/[city_name]
 <br/>
+
 ![My Image](./image/result.png)
 
 
