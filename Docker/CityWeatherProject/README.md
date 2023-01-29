@@ -1,5 +1,5 @@
 # **City - Weather Project**
-*This project is to convert City name search to weather information with Microservice*
+*This project is to convert City name search to Weather information with Microservice*
 
 ## **Create two containers**
 
