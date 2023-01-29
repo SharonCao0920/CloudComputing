@@ -12,3 +12,7 @@
 * **Microservice 2:** Convert Zipcode to Weather information
 
 ![My Image](./image/m2.png)
+
+## **Docker Images and Containers**
+![My Image](./image/images.png)
+![My Image](./image/containers.png)
