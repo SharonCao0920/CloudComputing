@@ -1,7 +1,7 @@
 # **City - Weather Project**
 *This project is to convert City name search to Weather information with Microservice*
 
-![My Image](./image/requirement.png)
+![My Image](./image/requirements.png)
 
 ## **Create two containers**
 
