@@ -1,7 +1,7 @@
 # **Microservice 1: City Name to Zipcode**
 
 ## **Setp 1: Create cityserver.py file to take city name and output zipcodes**
-
+![My Image](./image/citysever.png)
 
 ## **Step 2: Test cityserver.py**
 * **In Broswer**
@@ -11,10 +11,10 @@
 
 
 ## **Step 3: Create Dockerfile**
+![My Image](./image/dockerfile.png)
 
-
-## **Step 4: Create requirment.txt**
-
+## **Step 4: Create requirement.txt**
+![My Image](./image/requirement.png)
 
 ## **Step 5: Build Image**
 
