@@ -43,9 +43,13 @@ run()
 
 ## **Step 2: Test cityserver.py**
 ### **1) In Broswer**
+
+* Run cityserver.py
 ```
 $ python cityserver.py
 ```
+
+* Open browser with URL: http://localhost:8000/zipcode/[city_name]
 
 
 ### **2) With curl**
