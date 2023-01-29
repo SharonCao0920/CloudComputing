@@ -86,10 +86,13 @@ $ docker build -t cityserver .
 ## **Step 6: Start a Container from this Image**
 
 #### **Run Container**
+docker run -p 8000:8000 [Imagename]
 ```
 $ docker run -p 8000:8000 cityserver
+$ docker run -p 8000:8000 b455309fa6d6fc0a7f2fb48e8da91cd6b6c3f64a8cf3d84de6936c8d34c2bda0
 ```
-![My Image](./image/run.png)
+![My Image](./image/pull.png)
+![My Image](./image/pullimage.png)
 
 #### **Check on Docker**
 ![My Image](./image/dockerContainer.png)
