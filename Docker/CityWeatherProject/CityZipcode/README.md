@@ -2,7 +2,7 @@
 
 ## **Setp 1: Create cityserver.py file to take city name and output zipcodes**
 
-'''
+```
 import uszipcode
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
