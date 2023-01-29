@@ -1,9 +1,9 @@
 # **City - Weather Project**
-*This project is to convert City name search to Weather information with Microservice*
+*This project is to convert City name search to Weather information with Microservices*
 
 ![My Image](./image/requirement.png)
 
-## **Create two containers**
+## **Create Two Microservices**
 
 * **Microservice 1:** Convert City Name to Zipcode
 
