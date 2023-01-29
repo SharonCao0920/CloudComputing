@@ -10,7 +10,6 @@ Convert City Name to Zipcode
 
 ![My Image](./image/m1.png)
 
-
 * **Microservice 2:** 
 Convert Zipcode to Weather information
 
