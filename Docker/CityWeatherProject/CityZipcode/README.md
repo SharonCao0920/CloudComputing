@@ -48,14 +48,16 @@ run()
 ```
 $ python cityserver.py
 ```
+![My Image](./image/run.png)
 
 * Open browser with URL: http://localhost:8000/zipcode/[city_name]
-
+![My Image](./image/result.png)
 
 ### **2) With curl**
 ```
 $ curl http://localhost:8000/zipcode/[city_name]
 ```
+![My Image](./image/curl.png)
 
 ## **Step 3: Create Dockerfile**
 ![My Image](./image/dockerfile.png)
