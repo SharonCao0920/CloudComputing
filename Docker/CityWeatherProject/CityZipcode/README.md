@@ -80,7 +80,7 @@ $ docker build -t cityserver .
 ![My Image](./image/image.png)
 
 #### **Check on Docker**
-![My Image](./image/dockerimage.png)
+![My Image](./image/dockerImage.png)
 
 
 ## **Step 6: Start a Container from this Image**
