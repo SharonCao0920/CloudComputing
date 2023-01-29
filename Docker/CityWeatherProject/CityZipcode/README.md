@@ -50,7 +50,7 @@ $ python cityserver.py
 
 * **With curl**
 ```
-$ curl http://localhost:8000/zipcode/{city_name}
+$ curl http://localhost:8000/zipcode/[city_name]
 ```
 
 ## **Step 3: Create Dockerfile**
