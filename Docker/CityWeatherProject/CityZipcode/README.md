@@ -73,6 +73,27 @@ $ curl http://localhost:8000/zipcode/[city_name]
 ![My Image](./image/requirements.png)
 
 ## **Step 5: Build Image**
+#### **Build Image**
+```
+$ docker build -t cityserver .
+```
+![My Image](./image/image.png)
+
+#### **Check on Docker**
+![My Image](./image/dockerimage.png)
 
 
 ## **Step 6: Start a Container from this Image**
+
+#### **Run Container**
+```
+$ docker run -p 8000:8000 cityserver
+```
+![My Image](./image/run.png)
+
+#### **Check on Docker**
+![My Image](./image/dockerContainer.png)
+
+## Reuslt
+![My Image](./image/runcontainer.png)
+![My Image](./image/runcontainer1.png)
