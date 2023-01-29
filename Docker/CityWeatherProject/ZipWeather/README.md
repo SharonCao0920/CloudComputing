@@ -77,7 +77,7 @@ $ python zipserver.py
 * Open browser with URL: http://localhost:8888/[zipcode]
 <br/>
 
-![My Image](./image/browser.png)
+![My Image](./image/brower.png)
 ![My Image](./image/ziptoweather.png)
 
 
