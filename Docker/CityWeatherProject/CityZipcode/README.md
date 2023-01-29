@@ -1,7 +1,7 @@
 # **Microservice 1: City Name to Zipcode**
 
 ## **Setp 1: Create cityserver.py file to take city name and output zipcodes**
-![My Image](./image/citysever.png)
+![My Image](./image/cityzip.png)
 
 ## **Step 2: Test cityserver.py**
 * **In Broswer**
