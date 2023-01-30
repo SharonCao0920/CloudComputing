@@ -23,20 +23,20 @@
 
 
 ## **Push Images to DockerHub**
-Check Images Created
+**Check Images Created**
 ```
 $ docker images
 ```
 ![My Image](./image/localimage.png)
 
-Create tags for Images
+**Create Tags for Images**
 ```
 $ docker tag 752034694e8f sharoncao0920/citytoweather:cityserver 
 $ docker tag c5651927e444 sharoncao0920/citytoweather:zipweather
 ```
 ![My Image](./image/createtags.png)
 
-Push Image Tags to DockerHub
+**Push Image Tags to DockerHub**
 ```
 $ docker push sharoncao0920/citytoweather:cityserver
 ```
@@ -47,6 +47,6 @@ $ docker push sharoncao0920/citytoweather:zipweather
 ```
 ![My Image](./image/pushimage1.png)
 
-Check Result on DockerHub
+**Check Result on DockerHub**
 
 ![My Image](./image/dockeruhb.png)
