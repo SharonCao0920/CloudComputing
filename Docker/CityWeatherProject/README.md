@@ -17,6 +17,32 @@
 
 [**Details**](https://github.com/SharonCao0920/CloudComputing/tree/main/Docker/CityWeatherProject/ZipWeather)
 
-## **Docker Images and Containers**
+## **Docker Desktop Images and Containers**
 ![My Image](./image/images.png)
 ![My Image](./image/containers.png)
+
+
+## **Push Images to DockerHub**
+Check Images Created
+```
+$ docker images
+```
+![My Image](./image/localimage.png)
+
+Create tags for Images
+```
+$ docker tag 752034694e8f sharoncao0920/citytoweather:cityserver 
+$ docker tag c5651927e444 sharoncao0920/citytoweather:zipweather
+```
+![My Image](./image/createtags.png)
+
+Push Image Tags to DockerHub
+```
+$ docker push sharoncao0920/citytoweather:cityserver
+```
+![My Image](./image/pushimage.png)
+
+```
+$ docker push sharoncao0920/citytoweather:zipweather
+```
+![My Image](./image/pushimage1.png)
