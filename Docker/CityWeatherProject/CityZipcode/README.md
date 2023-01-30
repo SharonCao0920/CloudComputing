@@ -67,6 +67,21 @@ $ curl http://localhost:8000/zipcode/[city_name]
 
 
 ## **Step 3: Create Dockerfile**
+```
+FROM python:3.11-alpine
+
+RUN apk add --no-cache build-base
+
+COPY . /app
+
+WORKDIR /app
+
+RUN pip install -r requirements.txt
+
+EXPOSE 8000
+
+CMD ["python", "cityserver.py"]
+```
 ![My Image](./image/dockerfile.png)
 
 ## **Step 4: Create requirement.txt**
