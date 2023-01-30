@@ -82,7 +82,7 @@ EXPOSE 8000
 
 CMD ["python", "cityserver.py"]
 ```
-![My Image](./image/dockerfile.png)
+
 
 ## **Step 4: Create requirement.txt**
 ![My Image](./image/requirements.png)
