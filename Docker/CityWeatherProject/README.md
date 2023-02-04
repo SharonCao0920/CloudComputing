@@ -7,7 +7,7 @@
 
 ## **Create Two Microservices**
 
-* **Microservice 1:** Convert City Name to Zipcode
+* **Microservice 1:** Convert City Name to Zipcode and call service 2 to get weather information
 
 <img width="372" alt="m1" src="https://user-images.githubusercontent.com/54694766/216755588-9d82b458-12d0-468b-b0e7-ece739ea207c.png">
 
