@@ -7,13 +7,13 @@
 
 ## **Step 1: Create Two Microservices**
 
-* **Microservice 1:** Convert City Name to Zipcode and call service 2 to get weather information
+* ### **Microservice 1:** Convert City Name to Zipcode and call service 2 to get weather information
 
 <img width="372" alt="m1" src="https://user-images.githubusercontent.com/54694766/216755588-9d82b458-12d0-468b-b0e7-ece739ea207c.png">
 
 [**image build and container run details**](https://github.com/SharonCao0920/CloudComputing/tree/main/Docker/CityWeatherProject/CityWeather)
 
-* **Microservice 2:** Convert Zipcode to Weather information
+* ### **Microservice 2:** Convert Zipcode to Weather information
 
 <img width="230" alt="m2" src="https://user-images.githubusercontent.com/54694766/216755599-a20cf1dc-783d-4854-accb-2307a9c7b685.png">
 
