@@ -85,7 +85,8 @@ $ docker network connect city-weather-network zip-weather-container
 <img width="713" alt="Screenshot_20230204_123133" src="https://user-images.githubusercontent.com/54694766/216757491-a0db9821-e0f8-43b3-adfa-a5966db906bb.png">
 <img width="686" alt="Screenshot_20230204_123215" src="https://user-images.githubusercontent.com/54694766/216757508-f2040fb0-d901-4e54-8776-7e069efcc999.png">
 
-**Container2: http://127.0.0.1:5001/weather?zip_code={zip_code}
+**Container2: http://127.0.0.1:5001/weather?zip_code={zip_code}**
+
 <img width="439" alt="Screenshot_20230204_123559" src="https://user-images.githubusercontent.com/54694766/216757644-08f197bc-3620-4053-941b-6fa380a25cdb.png">
 
 
