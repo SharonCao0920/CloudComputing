@@ -19,7 +19,7 @@
 
 [**image build and container run details**](https://github.com/SharonCao0920/CloudComputing/tree/main/Docker/CityWeatherProject/ZipWeather)
 
-## **Docker Desktop Images and Containers**
+## **Step 1: Docker Desktop Images and Containers**
 ### Images
 <img width="942" alt="Screenshot_20230203_114622" src="https://user-images.githubusercontent.com/54694766/216755673-3000c4e8-fbc3-4673-a7ba-bde18e87160f.png">
 
