@@ -1,7 +1,7 @@
 # **Microservice 1: City Name to Zipcode**
 
 ## **Setp 1: Create cityweather.py**
-*Requirement: Take in city name and use the city zipcode to call service 2 to get weather information on browser**
+*Requirement: Take in city name and use the city zipcode to call service 2 to get weather information on browser*
 
 ```
 import requests
@@ -67,6 +67,3 @@ $ docker run --name city-weather-container -p 5000:5000 city-weather
 ### **Check on Docker**
 <img width="739" alt="Screenshot_20230203_112309" src="https://user-images.githubusercontent.com/54694766/216754783-fa9db4b7-cf84-417a-97bf-5f65ec299214.png">
 
-## Reuslt
-![My Image](./image/runcontainer.png)
-![My Image](./image/runcontainer1.png)
