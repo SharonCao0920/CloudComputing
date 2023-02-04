@@ -59,3 +59,22 @@ $ docker run --name zip-weather-container -p 5001:5001 zip-weather
 
 ### **Check on Docker**
 <img width="753" alt="Screenshot_20230203_113854" src="https://user-images.githubusercontent.com/54694766/216755396-9ded8448-dc59-4224-a903-4376b14ecd70.png">
+
+## **Step 5: Push Images to DockerHub**
+
+**Create Tags for Images**
+```
+$ docker tag city-weather sharoncao0920/citytoweather:cityweather
+```
+<img width="914" alt="Screenshot_20230204_124706" src="https://user-images.githubusercontent.com/54694766/216758102-62c9551a-3046-4ae9-923f-f41b9f85013d.png">
+
+
+**Push Image Tags to DockerHub**
+```
+$ docker push sharoncao0920/citytoweather:cityweather
+```
+<img width="935" alt="Screenshot_20230204_124801" src="https://user-images.githubusercontent.com/54694766/216758144-4f6c36d5-7c49-4182-aad6-1f85eac57aa6.png">
+
+**Check Result on DockerHub**
+<img width="1031" alt="Screenshot_20230204_124847" src="https://user-images.githubusercontent.com/54694766/216758184-b054122e-2537-42c8-a7ef-9ac084a872d3.png">
+
