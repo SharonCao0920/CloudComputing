@@ -40,4 +40,65 @@ $ docker container ls
 ```
 <img width="1463" alt="Screenshot_20230203_114855" src="https://user-images.githubusercontent.com/54694766/216755808-ec030d72-43aa-4736-b3b9-554b58fd47d7.png">
 
+## **Step 2: Set Up Docker Network **
 
+### Create Docker Network
+```
+$ docker network create city-weather-network
+```
+
+### Check Available Network
+```
+$ docker network ls
+```
+<img width="721" alt="Screenshot_20230204_121020" src="https://user-images.githubusercontent.com/54694766/216756583-c483b91d-d736-48f9-a6e8-bb962633fe00.png">
+
+### Inspect Network Before Adding Containers
+```
+$ docker network inspect city-weather-network
+```
+<img width="947" alt="Screenshot_20230204_121228" src="https://user-images.githubusercontent.com/54694766/216756700-4c62e3ee-97d0-456e-ad8a-5fe917c7b30e.png">
+
+
+### Add Containers to Network
+```
+$ docker network connect city-weather-network city-weather-container
+$ docker network connect city-weather-network zip-weather-container
+```
+
+### Inspect Network Again to Make Sure Containers Added
+<img width="1027" alt="Screenshot_20230204_121538" src="https://user-images.githubusercontent.com/54694766/216756789-cb96b229-1a2c-431c-af91-241097f74e4c.png">
+
+## **Step 3: Verify Communication Between Containers**
+
+### On Browser
+
+**Go to http://127.0.0.1:5000**
+
+<img width="484" alt="Screenshot_20230204_122019" src="https://user-images.githubusercontent.com/54694766/216756974-869a23d9-909f-4e38-8190-5b57cdc82bcd.png">
+
+**Go to http://127.0.0.1:5000/cityweather** (No City Information)
+
+<img width="658" alt="Screenshot_20230204_122141" src="https://user-images.githubusercontent.com/54694766/216757054-6cc0caf5-fd7e-4bc3-b53a-5a81f48d4fea.png">
+
+**Go to http://127.0.0.1:5000/cityweather?city={city}**
+
+<img width="665" alt="Screenshot_20230204_122231" src="https://user-images.githubusercontent.com/54694766/216757079-d12ab450-d4ff-48ef-a53d-bf5a0ec9a1f6.png">
+<img width="670" alt="Screenshot_20230204_122254" src="https://user-images.githubusercontent.com/54694766/216757101-0564547a-16a0-48b7-9d60-d6b3f8b46583.png">
+
+### With curl
+**In terminal**
+```
+culr http://127.0.0.1:5000/
+```
+<img width="1207" alt="Screenshot_20230204_122444" src="https://user-images.githubusercontent.com/54694766/216757185-87acad4d-da0c-4df3-bd3d-391404143c7e.png">
+
+```
+culr http://127.0.0.1:5000/cityweather
+```
+<img width="1209" alt="Screenshot_20230204_122642" src="https://user-images.githubusercontent.com/54694766/216757278-9fe132de-c92d-4db8-afbf-f82090d84df1.png">
+
+```
+culr http://127.0.0.1:5000/cityweather?city=Milpitas
+```
+<img width="1222" alt="Screenshot_20230204_122747" src="https://user-images.githubusercontent.com/54694766/216757325-3b1b0e08-daca-4e6e-8e63-f6844938bfa6.png">
