@@ -78,12 +78,15 @@ $ docker network connect city-weather-network zip-weather-container
 
 **Go to http://127.0.0.1:5000/cityweather** (No City Information)
 
-<img width="658" alt="Screenshot_20230204_122141" src="https://user-images.githubusercontent.com/54694766/216757054-6cc0caf5-fd7e-4bc3-b53a-5a81f48d4fea.png">
+<img width="519" alt="Screenshot_20230204_123256" src="https://user-images.githubusercontent.com/54694766/216757528-ede1e05c-e44a-4c5a-8403-b52659e6b017.png">
 
 **Go to http://127.0.0.1:5000/cityweather?city={city}**
 
 <img width="713" alt="Screenshot_20230204_123133" src="https://user-images.githubusercontent.com/54694766/216757491-a0db9821-e0f8-43b3-adfa-a5966db906bb.png">
 <img width="686" alt="Screenshot_20230204_123215" src="https://user-images.githubusercontent.com/54694766/216757508-f2040fb0-d901-4e54-8776-7e069efcc999.png">
+
+**Container2: http://127.0.0.1:5001/weather?zip_code={zip_code}
+<img width="439" alt="Screenshot_20230204_123559" src="https://user-images.githubusercontent.com/54694766/216757644-08f197bc-3620-4053-941b-6fa380a25cdb.png">
 
 
 ### With curl
@@ -102,3 +105,8 @@ culr http://127.0.0.1:5000/cityweather
 culr http://127.0.0.1:5000/cityweather?city=Milpitas
 ```
 <img width="1222" alt="Screenshot_20230204_122747" src="https://user-images.githubusercontent.com/54694766/216757325-3b1b0e08-daca-4e6e-8e63-f6844938bfa6.png">
+
+```
+curl http://127.0.0.1:5001/weather?zip_code=10001
+```
+<img width="1202" alt="Screenshot_20230204_123704" src="https://user-images.githubusercontent.com/54694766/216757695-189e68e4-2448-433e-bec5-2b8bd97d199d.png">
