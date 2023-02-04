@@ -1,7 +1,7 @@
 # **Microservice 1: City Name to Zipcode**
 
 ## **Setp 1: Create cityweather.py**
-*Requirement: Take in city name and use the city zipcode to call service 2 to get weather information on browser*
+### *Requirement: Take in city name and use the city zipcode to call service 2 to get weather information on browser*
 
 ```
 import requests
