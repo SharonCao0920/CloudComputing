@@ -1,116 +1,71 @@
 # **Microservice 1: City Name to Zipcode**
 
-## **Setp 1: Create cityserver.py file to take city name and output zipcodes**
+## **Setp 1: Create cityweather.py**
+*Requirement: Take in city name and use the city zipcode to call service 2 to get weather information on browser**
 
 ```
-import uszipcode
-from http.server import BaseHTTPRequestHandler, HTTPServer
+import requests
+from flask import Flask, request
 
-class RequestHandler(BaseHTTPRequestHandler):
-    def _send_response(self, message):
-        self.send_response(200)
-        self.send_header('Content-type', 'text/html')
-        self.end_headers()
-        self.wfile.write(bytes(message, "utf8"))
+app = Flask(__name__)
 
-    def do_GET(self):
-        print(f'Received request: {self.path}')
-        if self.path.startswith('/zipcode'):
-            city = self.path.split('/')[-1]
-            search = uszipcode.SearchEngine()
-            zipcodes = search.by_city_and_state(city,'CA', returns=0)
-            if zipcodes:
-                zipcode_list = [str(z.zipcode) for z in zipcodes]
-                response = "<html><body><h1>Zipcodes for {}</h1><ul>".format(city)
-                for zipcode in zipcode_list:
-                    response += "<li>{}</li>".format(zipcode)
-                response += "</ul></body></html>"
-                self._send_response(response)
-                print(f'Responese sent.')
-            else:
-                self._send_response('Invalid city name')
-                self._send_response('Correct URL for searching: http://localhost:8000/zipcode/[city_name]')
-                print(f'Sent response: Invalid city name')
+# Hardcoded city to zip code mapping
+zip_code_data = {
+    "New York": "10001",
+    "Los Angeles": "90001",
+    "Chicago": "60601",
+    "Milpitas": "95035"
+}
+@app.route("/")
+def ping_service():
+    return "Hello, Welcome to weather service!"
 
-def run(server_class=HTTPServer, handler_class=RequestHandler, port=8000):
-    server_address = ('', port)
-    httpd = server_class(server_address, handler_class)
-    print(f'Starting server on port {port}...')
-    httpd.serve_forever()
+@app.route("/cityweather")
+def get_zipcode_and_weather():
+    city = request.args.get("city")
+    zip_code = zip_code_data.get(city, "Not available")
+    if zip_code == "Not available":
+        return f"<h1>City: {city}</h1><br><h3>Zip code: {zip_code}</h3><br><h3>Weather: Not available</h3>"
+    
+    weather = requests.get(f"http://zip-weather-container:5001/weather?zip_code={zip_code}").text
+    return f"<h1>City: {city}</h1><br><h2>Weather:</h2><br><h3>{weather}</h3>"
 
-run()
+if __name__ == "__main__":
+    app.run(host ='0.0.0.0', port = 5000, debug = True)
 ```
 
-## **Step 2: Test cityserver.py**
-### **1) In Broswer**
-
-* Run cityserver.py
+## **Step 2: Create Dockerfile**
 ```
-$ python cityserver.py
-```
-![My Image](./image/run.png)
-
-
-* Open browser with URL: http://localhost:8000/zipcode/[city_name]
-<br/>
-
-![My Image](./image/result.png)
-
-
-### **2) With curl**
-
-```
-$ curl http://localhost:8000/zipcode/[city_name]
-```
-
-![My Image](./image/curl.png)
-
-
-## **Step 3: Create Dockerfile**
-```
-FROM python:3.11-alpine
-
-RUN apk add --no-cache build-base
-
-COPY . /app
-
+# Dockerfile for zip code to weather server
+FROM python:3.11
 WORKDIR /app
-
-RUN pip install -r requirements.txt
-
-EXPOSE 8000
-
-CMD ["python", "cityserver.py"]
+COPY . .
+RUN pip install Flask
+RUN pip install requests
+EXPOSE 5000
+CMD ["python", "cityweather.py"]
 ```
 
-
-## **Step 4: Create requirement.txt**
-![My Image](./image/requirements.png)
-
-## **Step 5: Build Image**
+## **Step 3: Build Image**
 ### **Build Image**
 ```
-$ docker build -t cityserver .
+$ docker build -t city-weather .
 ```
-![My Image](./image/image.png)
+<img width="1437" alt="Screenshot_20230203_111926" src="https://user-images.githubusercontent.com/54694766/216754667-d8b67e50-505b-4d0b-ac80-3355987511f3.png">
 
 ### **Check on Docker**
-![My Image](./image/dockerImage.png)
+<img width="739" alt="Screenshot_20230203_112134" src="https://user-images.githubusercontent.com/54694766/216754722-aadb8441-8659-4ead-8eb1-45a80391d446.png">
 
-
-## **Step 6: Start a Container from this Image**
+## **Step 4: Start a Container from this Image**
 
 ### **Run Container**
-docker run -p 8000:8000 [Imagename]
 ```
-$ docker run -p 8000:8000 cityserver
-$ docker run -p 8000:8000 b455309fa6d6fc0a7f2fb48e8da91cd6b6c3f64a8cf3d84de6936c8d34c2bda0
+$ docker run --name city-weather-container -p 5000:5000 city-weather
 ```
-![My Image](./image/pull.png)
-![My Image](./image/pullimage.png)
+<img width="1464" alt="Screenshot_20230203_112238" src="https://user-images.githubusercontent.com/54694766/216754771-7a6769be-675c-4650-904c-0c8ddb4059e6.png">
 
 ### **Check on Docker**
-![My Image](./image/dockerContainer.png)
+<img width="739" alt="Screenshot_20230203_112309" src="https://user-images.githubusercontent.com/54694766/216754783-fa9db4b7-cf84-417a-97bf-5f65ec299214.png">
 
 ## Reuslt
 ![My Image](./image/runcontainer.png)
