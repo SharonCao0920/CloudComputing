@@ -82,8 +82,9 @@ $ docker network connect city-weather-network zip-weather-container
 
 **Go to http://127.0.0.1:5000/cityweather?city={city}**
 
-<img width="665" alt="Screenshot_20230204_122231" src="https://user-images.githubusercontent.com/54694766/216757079-d12ab450-d4ff-48ef-a53d-bf5a0ec9a1f6.png">
-<img width="670" alt="Screenshot_20230204_122254" src="https://user-images.githubusercontent.com/54694766/216757101-0564547a-16a0-48b7-9d60-d6b3f8b46583.png">
+<img width="713" alt="Screenshot_20230204_123133" src="https://user-images.githubusercontent.com/54694766/216757491-a0db9821-e0f8-43b3-adfa-a5966db906bb.png">
+<img width="686" alt="Screenshot_20230204_123215" src="https://user-images.githubusercontent.com/54694766/216757508-f2040fb0-d901-4e54-8776-7e069efcc999.png">
+
 
 ### With curl
 **In terminal**
