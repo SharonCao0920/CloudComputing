@@ -34,31 +34,6 @@ if __name__ == "__main__":
     app.run(host ='0.0.0.0', port = 5000, debug = True)
 ```
 
-
-## **Push Images to DockerHub**
-
-**Create Tags for Images**
-```
-$ docker tag 752034694e8f sharoncao0920/citytoweather:cityserver 
-$ docker tag c5651927e444 sharoncao0920/citytoweather:zipweather
-```
-![My Image](./image/createtags.png)
-
-**Push Image Tags to DockerHub**
-```
-$ docker push sharoncao0920/citytoweather:cityserver
-```
-![My Image](./image/pushimage.png)
-
-```
-$ docker push sharoncao0920/citytoweather:zipweather
-```
-![My Image](./image/pushimage1.png)
-
-**Check Result on DockerHub**
-
-![My Image](./image/dockeruhb.png)
-
 ## **Step 2: Create Dockerfile**
 ```
 # Dockerfile for zip code to weather server
@@ -91,4 +66,23 @@ $ docker run --name city-weather-container -p 5000:5000 city-weather
 
 ### **Check on Docker**
 <img width="739" alt="Screenshot_20230203_112309" src="https://user-images.githubusercontent.com/54694766/216754783-fa9db4b7-cf84-417a-97bf-5f65ec299214.png">
+
+
+## **Step 5: Push Images to DockerHub**
+
+**Create Tags for Images**
+```
+$ docker tag city-weather sharoncao0920/citytoweather:cityweather
+```
+<img width="939" alt="Screenshot_20230204_124242" src="https://user-images.githubusercontent.com/54694766/216757925-b0f1c207-573e-4771-9b01-479eea8762dc.png">
+
+
+**Push Image Tags to DockerHub**
+```
+$ docker push sharoncao0920/citytoweather:cityweather
+```
+<img width="917" alt="Screenshot_20230204_124406" src="https://user-images.githubusercontent.com/54694766/216757972-e3913f31-3f5e-435c-8fe6-a16f4a30f313.png">
+
+**Check Result on DockerHub**
+<img width="1008" alt="Screenshot_20230204_124532" src="https://user-images.githubusercontent.com/54694766/216758035-9ca26839-c499-4197-bfa1-bc16c992ca20.png">
 
