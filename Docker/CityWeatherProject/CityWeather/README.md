@@ -34,6 +34,31 @@ if __name__ == "__main__":
     app.run(host ='0.0.0.0', port = 5000, debug = True)
 ```
 
+
+## **Push Images to DockerHub**
+
+**Create Tags for Images**
+```
+$ docker tag 752034694e8f sharoncao0920/citytoweather:cityserver 
+$ docker tag c5651927e444 sharoncao0920/citytoweather:zipweather
+```
+![My Image](./image/createtags.png)
+
+**Push Image Tags to DockerHub**
+```
+$ docker push sharoncao0920/citytoweather:cityserver
+```
+![My Image](./image/pushimage.png)
+
+```
+$ docker push sharoncao0920/citytoweather:zipweather
+```
+![My Image](./image/pushimage1.png)
+
+**Check Result on DockerHub**
+
+![My Image](./image/dockeruhb.png)
+
 ## **Step 2: Create Dockerfile**
 ```
 # Dockerfile for zip code to weather server
