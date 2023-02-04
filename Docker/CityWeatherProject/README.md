@@ -5,7 +5,7 @@
 ### File Structure
 <img width="170" alt="Screenshot_20230203_083248" src="https://user-images.githubusercontent.com/54694766/216756107-622d20f7-639b-4096-aebf-d2f49df2caf9.png">
 
-## **Create Two Microservices**
+## **Step 1: Create Two Microservices**
 
 * **Microservice 1:** Convert City Name to Zipcode and call service 2 to get weather information
 
@@ -19,7 +19,6 @@
 
 [**image build and container run details**](https://github.com/SharonCao0920/CloudComputing/tree/main/Docker/CityWeatherProject/ZipWeather)
 
-## **Step 1: Docker Desktop Images and Containers**
 ### Images
 <img width="942" alt="Screenshot_20230203_114622" src="https://user-images.githubusercontent.com/54694766/216755673-3000c4e8-fbc3-4673-a7ba-bde18e87160f.png">
 
@@ -40,7 +39,7 @@ $ docker container ls
 ```
 <img width="1463" alt="Screenshot_20230203_114855" src="https://user-images.githubusercontent.com/54694766/216755808-ec030d72-43aa-4736-b3b9-554b58fd47d7.png">
 
-## **Step 2: Set Up Docker Network **
+## **Step 2: Set Up Docker Network**
 
 ### Create Docker Network
 ```
