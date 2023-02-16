@@ -24,7 +24,6 @@
 
 **Check Images Created**
 ```
-//docker
 $ docker images
 ```
 <img width="728" alt="Screenshot_20230203_114809" src="https://user-images.githubusercontent.com/54694766/216755756-733f940b-0c09-4bd3-9e89-d2ebdb70a890.png">
