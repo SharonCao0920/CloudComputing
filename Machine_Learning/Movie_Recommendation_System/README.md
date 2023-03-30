@@ -1,6 +1,5 @@
 # Movie Recommendation system
 
-This PageRank Project is to implemente PageRank algorithm with PySpark and Scala.
 
 **[Movie Recommendation system Google Slides](https://docs.google.com/presentation/d/1Bm1x5WRxM4nd2nwazsE5S-8ZJUpw5Di39ZobLhlzMB0/edit?usp=sharing)**
 
